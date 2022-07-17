@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <section class="hero-wrap hero-wrap-2" style="background-color:#0e3d75 !important">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">{{course_name.0.name}}</h1>
+          <!--  <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="index.html">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog Single <i class="ion-ios-arrow-forward"></i></span></p>
+            --> 
+          </div>
+        </div>
+      </div>
+    </section>
+		
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row">
+          <div class="col-lg-8 ftco-animate">
+            <h2 class="mb-3">{{sub_course_detail.0.sub_name}}</h2>
+            <p>
+              <img src="{{sub_course_detail.0.sub_image_course.url}}" alt="" class="img-fluid">
+            </p>
+            <p>{{sub_course_detail.0.sub_context|linebreaks}}</p>
+            
+            <div class="about-author d-flex p-4 bg-light">
+              <div class="bio mr-5">
+                <img src="{{teacher.0.image_teacher.url}}" alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <h3>{{teacher.0.name}}</h3>
+                <p>{{teacher.0.about}}</p>
+              </div>
+            </div>
+
+
+
+          </div> <!-- .col-md-8 -->
+
+          <div class="col-lg-4 sidebar ftco-animate">
+
+            <div class="sidebar-box ftco-animate">
+              <h3>Description</h3>
+              <p>{{course_name.0.description}}</p>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+            	<h3>Lessons</h3>
+              <ul class="categories">
+                {% for lesson in lessons %}
+                  {% for course in course_name %}
+              	<li><a href="{% url 'courses:course-content'  coursename=course.name pk=lesson.pk %}">{{lesson.sub_name}} </a></li>
+                  {% endfor %}
+              	{% endfor %}
+              </ul>
+            </div>
+
+       
+            <div class="sidebar-box ftco-animate">
+            	<h3>Courses</h3>
+              <ul class="categories">
+                {% for course in course %}
+                <li><a href="{% url 'courses:course-detail'  coursename=course.name %}">{{course.name}} </a></li>
+                {% endfor %}
+              </ul>
+            </div>
+
+           
+
+            <div class="sidebar-box ftco-animate">
+              <h3>Tag Cloud</h3>
+              <ul class="tagcloud m-0 p-0">
+                <a href="#" class="tag-cloud-link">Learning</a>
+                <a href="#" class="tag-cloud-link">Grammar</a>
+                <a href="#" class="tag-cloud-link">English</a>
+                <a href="#" class="tag-cloud-link">Russian</a>
+                <a href="#" class="tag-cloud-link">Farsi</a>
+              </ul>
+            </div>
+
+       
+          </div><!-- END COL -->
+        </div>
+			</div>
+		</section>
+
+{% endblock body %}
+    

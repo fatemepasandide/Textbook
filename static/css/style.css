@@ -166,7 +166,9 @@ figure {
 
 img {
   vertical-align: middle;
-  border-style: none; }
+  border-style: none;
+
+ }
 
 svg {
   overflow: hidden;
@@ -889,8 +891,8 @@ pre {
   .col-md-6 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%; }
+    flex: 0 0 100%;
+    max-width: 100% ; }
   .col-md-7 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 58.33333%;
@@ -3781,6 +3783,7 @@ input[type="button"].btn-block {
       color: #fff; }
 
 .card {
+  width: 600px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7985,7 +7988,7 @@ body {
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.5); }
+  color: rgba(0, 0, 0, 1); }
   body.menu-show {
     overflow: hidden;
     position: fixed;
@@ -8206,7 +8209,7 @@ h1, h2, h3, h4, h5,
     bottom: 0;
     content: '';
     opacity: .3;
-    background: #f1453d; }
+  /* background: #f1453d; */}
   .hero-wrap.hero-wrap-2 {
     height: 300px; }
     .hero-wrap.hero-wrap-2 .slider-text {
@@ -8408,6 +8411,9 @@ h1, h2, h3, h4, h5,
 .bg-light {
   background: #fafafa !important; }
 
+.bg-light-list {
+  background: #fafafa00 !important; }
+
 .bg-white {
   background: #fff !important; }
 
@@ -8601,7 +8607,7 @@ h1, h2, h3, h4, h5,
 .course {
   margin-bottom: 30px; }
   .course .text {
-    width: calc(100% - 250px); }
+    width: calc(100% - 10px); }
     @media (max-width: 991.98px) {
       .course .text {
         width: 100%; } }
@@ -8613,7 +8619,8 @@ h1, h2, h3, h4, h5,
       font-weight: 500;
       font-size: 24px; }
   .course .img {
-    width: 250px; }
+    width: 250px;
+    height: 250px; }
     @media (max-width: 991.98px) {
       .course .img {
         width: 100%;
@@ -8630,7 +8637,7 @@ h1, h2, h3, h4, h5,
   .staff .img-wrap {
     height: 300px; }
   .staff .img {
-    width: 100%;
+    border-radius: 50%;
     display: block;
     background-position: top center;
     -moz-transition: all 0.3s ease;
@@ -8680,8 +8687,7 @@ h1, h2, h3, h4, h5,
   .staff:hover .ftco-social, .staff:focus .ftco-social {
     opacity: 1;
     top: -40px; }
-  .staff:hover .img, .staff:focus .img {
-    margin-top: -10px; }
+
   .staff:hover .text h3, .staff:focus .text h3 {
     color: #1eaaf1; }
 

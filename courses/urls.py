@@ -5,8 +5,13 @@ from . import views
 app_name = 'courses'
 
 urlpatterns = [
-  #  path('home/', views.home ,name='home'),
-  #  path('course/<pk>/',views.ProductDetail.as_view() , name='product-detail'),
-    path('courses/',views.CourseList.as_view() , name='courses'),
+
+  path('courses/',views.CourseList.as_view() , name='courses'),
+  path('courses/<str:coursename>/',views.courseDetail , name='course-detail'),
+  path('courses/<str:coursename>/<pk>/',views.courseContent , name='course-content'),
+  #path('coursesdetail/<pk>',views.CourseDetail.as_view() , name='course-detail'),
+  #path('coursecontent/',views.SubCourseDetail.as_view() , name='course-content'),
+#  path('coursesdetail/<pk>',views.courseDetail , name='course-detail'),
+
 
 ]

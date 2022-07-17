@@ -16,8 +16,8 @@
                <img class="img" src="{{courses.image_course.url}}" alt="">
                
                 <div class="text bg-light p-4">
-                    <h3><a href="#">{{courses.name}}</a></h3>
-                    <p class="subheading"><span>Course Length:</span>{{courses.length}}</p>
+                    <h3><a href="{% url 'courses:course-detail'  coursename=courses.name %}">{{courses.name}}</a></h3>
+                    <p class="subheading"><span>Course Length: </span>{{courses.length}}</p>
                     <p>{{courses.description}}</p>
                 </div>
               

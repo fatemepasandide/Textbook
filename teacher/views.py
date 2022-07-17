@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from .models import Teacher
+from django.views.generic import  ListView
 
-# Create your views here.
-def teacher(request):
-    return request
+
+class TeacherList(ListView):
+    model = Teacher
+    template_name = 'teacher.html'

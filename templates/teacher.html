@@ -3,30 +3,42 @@
 <title>Teacher | Russian Matryoshka</title>
 {% endblock title %}
 {% block body %}
-<body style="background-color:#eb7680">
+<body style="background-color:#f7abb2">
 
 		
 		<section class="ftco-section ftco-no-pb">
 			<div class="container d-flex justify-content-center">
 				<div class="row">
 					<div class="ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/teacher-1.jpg);"></div>
+						{% for teacher in object_list %}
+						<div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+							<div class="card p-4">
+								<div class=" image d-flex flex-column justify-content-center align-items-center">
+									<div class="staff">
+										<img src="{{teacher.image_teacher.url}}" height="100" width="100" />
+									</div>
+									<span class="name mt-3"> <strong>{{teacher.name}}</strong></span>
+									<div class="row">
+									<a href="https://www.instagram.com/ranaazarminoo/"><span class="icon-instagram"></span></a> &nbsp;&nbsp;
+									<a href="#"><span class="icon-linkedin"></span></a>
+									</div>
+									<div class="d-flex flex-row justify-content-center align-items-center gap-2">
+									<span><i class="fa fa-copy"></i></span> 
+								</div>
+								
+								<div class="text mt-3">
+									<span>{{teacher.about}}</span>
+								</div>
+								<div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center">
+									<span><i class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span>
+									<span><i class="fa fa-instagram"></i></span> <span><i class="fa fa-linkedin"></i></span>
+								</div>
+							
 							</div>
-							<div class="text pt-3 text-center">
-								<h3>Bianca Wilson</h3>
-								<span class="position mb-2">Teacher</span>
-								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-		              </ul>
-	              </div>
-							</div>
+						</div>
+						</div>
+						{% endfor %}
+						
 						</div>
 					</div>
 							</div>
