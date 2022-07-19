@@ -3,7 +3,7 @@
 [![Django](https://img.shields.io/badge/-Django-25383e?style=flat&logo=django&logoColor=092E20)](https://www.djangoproject.com/)
 ![MySQL](https://img.shields.io/badge/-SQL-25383e?&logo=MySQL)
 
-A blog for teacher's booklet.
+A blog with django for teacher's booklet.
 
 ## TO DO :
 - [ ] Internationalization
