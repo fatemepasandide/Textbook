@@ -4,7 +4,7 @@ from django.shortcuts import redirect
 from django.contrib import messages
 
 
-def contactUs(request):
+def contact_us(request):
     if request.method == "POST":
         form = ContactUsForm(request.POST)
         if form.is_valid():
